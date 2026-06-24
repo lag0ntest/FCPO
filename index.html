@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Pack Opener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏆 World Cup Pack Opener</h1>
+        
+        <div class="store-section" id="store">
+            <div class="pack-card" onclick="openPack('gold')">
+                <div class="pack-badge">PROMO</div>
+                <h3>Gold World Cup Pack</h3>
+                <p>Contains 1 Guaranteed 85+ Player</p>
+                <button class="open-btn">Open Pack</button>
+            </div>
+        </div>
+
+        <div class="pack-reveal-container hidden" id="reveal-screen">
+            <div class="pack-animation" id="pack-anim">
+                <div class="spinning-glow"></div>
+                <h2 class="loading-text">Opening Pack...</h2>
+            </div>
+            
+            <div class="card-display hidden" id="card-display">
+                <div class="fut-card gold-card">
+                    <div class="card-top">
+                        <div class="card-rating" id="player-rating">91</div>
+                        <div class="card-position" id="player-pos">ST</div>
+                        <img src="https://flagcdn.com/w40/fr.png" class="card-nation" id="player-nation" alt="Nation">
+                    </div>
+                    <div class="card-image-container">
+                        <img src="" class="player-img" id="player-img" alt="Player">
+                    </div>
+                    <div class="card-bottom">
+                        <div class="player-name" id="player-name">MBAPPÉ</div>
+                        <div class="player-stats">
+                            <div><span id="stat-pac">97</span> PAC</div>
+                            <div><span id="stat-dri">92</span> DRI</div>
+                            <div><span id="stat-sho">90</span> SHO</div>
+                            <div><span id="stat-def">36</span> DEF</div>
+                            <div><span id="stat-pas">80</span> PAS</div>
+                            <div><span id="stat-phy">78</span> PHY</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn" onclick="resetStore()">Open Another</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
