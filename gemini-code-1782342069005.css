@@ -1,0 +1,186 @@
+:root {
+    --gold-bg: linear-gradient(135deg, #ffe066 0%, #f5af19 50%, #e65c00 100%);
+    --dark-bg: #0f111a;
+    --card-dark: #1c1f30;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Store Section */
+.store-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pack-card {
+    background: linear-gradient(145deg, #1e2238, #141724);
+    border: 2px solid #cf9e2e;
+    border-radius: 12px;
+    padding: 30px;
+    width: 220px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.pack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(207, 158, 46, 0.3);
+}
+
+.pack-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e65c00;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.open-btn, .next-btn {
+    background: #cf9e2e;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Pack Animation Screen */
+.pack-reveal-container {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Glowing Spinning Background Animation */
+.spinning-glow {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(245,175,25,0.8) 0%, transparent 70%);
+    animation: pulse 1.5s infinite ease-in-out;
+    margin: 0 auto 20px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+/* FUT Card Style styling */
+.fut-card {
+    width: 260px;
+    height: 390px;
+    background: var(--gold-bg);
+    border-radius: 15px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    line-height: 1;
+}
+
+.card-rating {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.card-position {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.card-nation {
+    width: 30px;
+    margin-top: 8px;
+    border: 1px solid #333;
+}
+
+.card-image-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.player-img {
+    height: 180px;
+    object-fit: contain;
+}
+
+.card-bottom {
+    background: rgba(0, 0, 0, 0.07);
+    border-top: 2px solid rgba(0,0,0,0.1);
+    flex-grow: 1;
+    margin-top: 5px;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+
+.player-name {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.player-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 15px;
+    font-size: 14px;
+}
+
+.player-stats div {
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 2px;
+}
